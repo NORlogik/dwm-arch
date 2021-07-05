@@ -1,0 +1,30 @@
+#!/bin/bash
+
+sudo pacman -S feh cmus wmname transmission-gtk mpv chromium gvfs-mtp i3lock pcmanfm-gtk3 gvfs file-roller neofetch ntfs-3g papirus-icon-theme picom pulseaudio pulsemixer rofi scrot eog evince sxhkd kitty wget xed xorg-server xorg-xinit xorg-xrandr --needed --noconfirm
+
+chmod +x .config/* && chmod +x .config/rofi/*
+
+cp -r .config .themes .fonts .xinitrc .vimrc .zshrc /$HOME/ 
+
+fc-cache -fv
+
+cd dwm-6.2
+
+sudo rm config.h && sudo make clean install && cd ..
+
+cd slstatus && sudo rm config.h && sudo make clean install
+
+curl https://raw.githubusercontent.com/yperta/walls/main/whitemt.jpg > /$HOME/.config/whitemt.jpg
+
+clear
+/bin/echo -e '\n\n' "\e[1;32mInstallation Completed..\e[0m"
+sleep 1
+/bin/echo -e '\n\n' "\e[1;32mREBOOTING IN ..3\e[0m"
+sleep 1
+/bin/echo -e '\n\n' "\e[1;32mREBOOTING IN ..2\e[0m"
+sleep 1
+/bin/echo -e '\n\n' "\e[1;32mREBOOTING IN ..1\e[0m"
+sleep 1
+/bin/echo -e '\n\n' "\e[1;32mREBOOTING NOW......\e[0m"
+
+sudo reboot
