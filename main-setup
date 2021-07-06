@@ -1,5 +1,7 @@
 #!/bin/bash
 
+sudo pacman -Syyu --needed --noconfirm
+
 sudo pacman -S feh cmus wmname transmission-gtk mpv chromium gvfs-mtp i3lock pcmanfm-gtk3 gvfs file-roller neofetch ntfs-3g papirus-icon-theme picom pulseaudio pulsemixer rofi scrot eog evince sxhkd kitty wget xed xorg-server xorg-xinit xorg-xrandr --needed --noconfirm
 
 chmod +x .config/* && chmod +x .config/rofi/*
