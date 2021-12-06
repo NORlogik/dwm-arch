@@ -2,7 +2,7 @@
 
 sudo pacman -Syyu --needed --noconfirm
 
-sudo pacman -S feh cmus wmname transmission-gtk xf86-video-amdgpu nvidia nvidia-settings mpv chromium gvfs-mtp i3lock pcmanfm-gtk3 gvfs file-roller neofetch ntfs-3g papirus-icon-theme picom pulseaudio pulsemixer dmenu scrot eog evince sxhkd kitty wget xed xorg-server xorg-xinit xorg-xrandr --needed --noconfirm
+sudo pacman -S feh cmus wmname transmission-gtk xf86-video-amdgpu os-prober mpv chromium gvfs-mtp i3lock pcmanfm-gtk3 gvfs file-roller neofetch ntfs-3g papirus-icon-theme picom pulseaudio pulsemixer dmenu scrot eog evince sxhkd kitty wget xed xorg-server xorg-xinit xorg-xrandr --needed --noconfirm
 
 chmod +x .config/* && chmod +x .config/rofi/*
 
