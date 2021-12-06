@@ -65,7 +65,7 @@ static const char unknown_str[] = "n/a";
  */
 static const struct arg args[] = {
 	/* function      format      argument */
-    { cpu_perc,      "  %s%%",       "NULL" },
+/*    { cpu_perc,      "  %s%%",       "NULL" },
     { run_command,   "%s",          "echo '  '" }, 
     { ram_perc,      " %s%%",         "NULL" },
     { run_command,   "%s",          "echo '  '" },  
@@ -84,6 +84,27 @@ static const struct arg args[] = {
     { run_command,    "%s",         "echo '  '" },   
     //{ datetime,        "%s",       "%a %b %d %H:%M %Y" },   
     { datetime,        "%s",       "%a %b %d %H:%M" },   
+
+*/
+
+        { netspeed_rx,  "D-%sB/s ", "wlp4s0" },
+        { netspeed_tx, "U-%sB/s ", "wlp4s0" },
+	{ run_command,   "%s",          "echo '  '" },
+        { wifi_perc, "%3s%% ", "wlp4s0" },
+	{ run_command,   "%s",          "echo '  '" },
+	{ cpu_perc, "C-%s ", NULL	      },
+	{ run_command, "%s",            "echo ' '" },
+	{ ram_perc, "R-%s ", NULL	      },
+	{ run_command,   "%s",          "echo '  '" },
+	{ battery_perc, "%3s%%", "BAT0" },
+	{ battery_state, "%s ", "BAT0" },  	
+	{ run_command,   "%s",          "echo ' '" },
+	{ run_command,   "T-%s",          "sensors | grep Tctl | awk '{print $2}' | sed 's/^.//'" },
+	{ run_command,   "%s",          "echo '  '" },
+	{ run_command, "V-%s%% ", "pulsemixer --get-volume | awk '{printf$1}'" }, 
+	{ run_command,   "%s",          "echo ' '" },
+	{ datetime, "%s",           " %a %b %d  %H:%M" },   
+
 
 
 };

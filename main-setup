@@ -2,7 +2,7 @@
 
 sudo pacman -Syyu --needed --noconfirm
 
-sudo pacman -S feh cmus wmname transmission-gtk mpv chromium gvfs-mtp i3lock pcmanfm-gtk3 gvfs file-roller neofetch ntfs-3g papirus-icon-theme picom pulseaudio pulsemixer rofi scrot eog evince sxhkd kitty wget xed xorg-server xorg-xinit xorg-xrandr --needed --noconfirm
+sudo pacman -S feh cmus wmname transmission-gtk xf86-video-amdgpu nvidia nvidia-settings mpv chromium gvfs-mtp i3lock pcmanfm-gtk3 gvfs file-roller neofetch ntfs-3g papirus-icon-theme picom pulseaudio pulsemixer dmenu scrot eog evince sxhkd kitty wget xed xorg-server xorg-xinit xorg-xrandr --needed --noconfirm
 
 chmod +x .config/* && chmod +x .config/rofi/*
 
@@ -14,7 +14,7 @@ cd dwm-6.2
 
 sudo rm config.h && sudo make clean install && cd ..
 
-cd slstatus && sudo rm config.h && sudo make clean install
+cd slstatus && sudo make clean install
 
 curl https://raw.githubusercontent.com/yperta/walls/main/whitemt.jpg > /$HOME/.config/whitemt.jpg
 

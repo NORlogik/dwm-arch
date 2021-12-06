@@ -63,8 +63,8 @@ static const char unknown_str[] = "n/a";
  * wifi_perc           WiFi signal in percent          interface name (wlan0)
  * wifi_essid          WiFi ESSID                      interface name (wlan0)
  */
-static const struct arg args[] = {
-	/* function      format      argument */
+/*static const struct arg args[] = {
+	/* function      format      argument 
     { cpu_perc,      "  %s%%",       "NULL" },
     { run_command,   "%s",          "echo '  '" }, 
     { ram_perc,      " %s%%",         "NULL" },
@@ -86,4 +86,48 @@ static const struct arg args[] = {
     { datetime,        "%s",       "%a %b %d %H:%M" },   
 
 
+};*/
+
+static const struct arg args[] = {
+
+    { netspeed_rx,  "D-%sB/s ", "wlp4s0" },
+    { netspeed_tx, "U-%sB/s ", "wlp4s0" },
+	{ run_command,   "%s",          "echo '  '" },
+    { wifi_perc, "%3s%% ", "wlp4s0" },
+	{ run_command,   "%s",          "echo '  '" },
+	{ cpu_perc, "C-%s ", NULL	      },
+	{ run_command, "%s",            "echo ' '" },
+	{ ram_perc, "R-%s ", NULL	      },
+	{ run_command,   "%s",          "echo '  '" },
+	{ battery_perc, "%3s%%", "BAT0" },
+	{ battery_state, "%s ", "BAT0" },  	
+	{ run_command,   "%s",          "echo ' '" },
+	{ run_command,   "T-%s",          "sensors | grep Tctl | awk '{print $2}' | sed 's/^.//'" },
+	{ run_command,   "%s",          "echo '  '" },
+	{ run_command, "V-%s%% ", "pulsemixer --get-volume | awk '{printf$1}'" }, 
+	{ run_command,   "%s",          "echo ' '" },
+	{ datetime, "%s",           " %a %b %d  %H:%M" },   
+
+
+
 };
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
