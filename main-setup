@@ -18,6 +18,10 @@ cd slstatus && sudo make clean install
 
 curl https://raw.githubusercontent.com/yperta/walls/main/whitemt.jpg > /$HOME/.config/whitemt.jpg
 
+echo "GRUB_DISABLE_OS_PROBER=false" >> /etc/default/grub
+
+sudo grub-mkconfig -o /boot/grub/grub.cfg
+
 clear
 /bin/echo -e '\n\n' "\e[1;32mInstallation Completed..\e[0m"
 sleep 1
